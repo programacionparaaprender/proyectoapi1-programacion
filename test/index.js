@@ -13,10 +13,10 @@ describe('Test de datos de diferentes usuarios de Github', () => {
             .get('/users/mugan86').
             reply(200, mugan86);
 
-        /* nock('https://api.github.com')
+        nock('https://api.github.com')
             .log(console.log)
             .get('/users/programacionparaaprender').
-            reply(200, programacionparaaprender); */
+            reply(200, programacionparaaprender); 
     });
     it('Obtener datos del usuario "mugan86"', () => {
         return obtenerUsuario('mugan86').then(
@@ -36,7 +36,7 @@ describe('Test de datos de diferentes usuarios de Github', () => {
             }
         )
     });
-    /* it('Obtener datos del usuario "programacionparaaprender"', () => {
+    it('Obtener datos del usuario "programacionparaaprender"', () => {
         return obtenerUsuario('programacionparaaprender').then(
             respuesta => {
                 // Probar el tipo de variable que obtenemos de repsuesta. Tiene que ser un objeto.
@@ -53,5 +53,5 @@ describe('Test de datos de diferentes usuarios de Github', () => {
                 expect(respuesta.public_repos).to.equal(132);
             }
         )
-    }); */
+    });
 });
