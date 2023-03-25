@@ -34,3 +34,6 @@ api.obtenerDatosDeUsuario('mugan86').then(
     }
 );
 ```
+
+### actualizaciones para volverlo typescript
+npx tsc --outDir ./build
